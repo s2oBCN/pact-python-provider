@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh script:'pytest --junitxml=reports/testReport.xml', returnStatus:true
+                sh script:'./verify_pact.sh', returnStatus:true
             }
         }
         stage('Publish') {
