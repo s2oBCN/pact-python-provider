@@ -29,7 +29,7 @@ else
 
   pact-verifier --provider-base-url=http://localhost:8000 \
     --provider-app-version $VERSION \
-    --pact-url="http://127.0.0.1/pacts/provider/UserService/consumer/UserServiceClient/latest" \
+    --pact-url="http://172.29.240.1/pacts/provider/UserService/consumer/UserServiceClient/latest" \
     --pact-broker-username pactbroker \
     --pact-broker-password pactbroker \
     --publish-verification-results \
