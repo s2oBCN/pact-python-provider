@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "==0.67.0"
+pytest = "==5.4.1"
+requests = ">=2.26.0"
+uvicorn = ">=0.14.0"
+testcontainers = "==3.3.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
