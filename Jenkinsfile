@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Verify') {
             steps {
-                sh script:'./verify_pact.sh 1', returnStatus:true
+                sh script:'./verify_pact.sh 1'
             }
         }
     }
