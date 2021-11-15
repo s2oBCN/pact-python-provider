@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh script:'./verify_pact.sh', returnStatus:true
+                sh script:'./verify_pact.sh 1', returnStatus:true
             }
         }
         stage('Publish') {
