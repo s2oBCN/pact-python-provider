@@ -5,6 +5,7 @@ set -o pipefail
 # inject the provider_states endpoint
 uvicorn tests.pact_provider:app & &>/dev/null
 FASTAPI_PID=$!
+PACT_BROKER_URL="${PACT_BROKER_URL:-127.0.0.1}"
 
 # Make sure the FastAPI server is stopped when finished to avoid blocking the port
 function teardown {
@@ -29,7 +30,7 @@ else
 
   pact-verifier --provider-base-url=http://localhost:8000 \
     --provider-app-version $VERSION \
-    --pact-url="http://172.29.240.1/pacts/provider/UserService/consumer/UserServiceClient/latest" \
+    --pact-url="http://$PACT_BROKER_URL/pacts/provider/UserService/consumer/UserServiceClient/latest" \
     --pact-broker-username pactbroker \
     --pact-broker-password pactbroker \
     --publish-verification-results \

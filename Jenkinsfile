@@ -13,14 +13,9 @@ pipeline {
                 sh 'pip install --no-cache-dir -r requirements.txt'
             }
         }
-        stage('Test') {
+        stage('Verify') {
             steps {
                 sh script:'./verify_pact.sh 1', returnStatus:true
-            }
-        }
-        stage('Publish') {
-            steps {
-                junit 'reports/testReport.xml'
             }
         }
     }
