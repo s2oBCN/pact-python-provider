@@ -8,6 +8,9 @@ pipeline {
     environment {
         PACT_BROKER_URL = 'http://172.29.240.1'
     }
+     options {
+        ansiColor('xterm')
+    }
     stages {
         stage('Build') {
             steps {
