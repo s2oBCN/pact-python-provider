@@ -6,7 +6,7 @@ pipeline {
     }
     parameters { string(name: 'DEPLOY_ENV', defaultValue: 'staging', description: '') }
     environment {
-        PACT_BROKER_URL = 'http://172.29.240.1'
+        PACT_BROKER_URL = 'http://172.21.167.170'
     }
      options {
         ansiColor('xterm')
