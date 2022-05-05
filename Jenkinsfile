@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.9.8-slim-buster'
+            image 'python:3.9.8'
         }
     }
     parameters { string(name: 'DEPLOY_ENV', defaultValue: 'staging', description: '') }
