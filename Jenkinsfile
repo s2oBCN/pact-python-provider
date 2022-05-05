@@ -14,10 +14,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'python3 -m pip install --upgrade pip'
-                sh 'sudo pip3 install virtualenv'
-                sh 'virtualenv enviroment_name -p python3'
-                sh 'source enviroment_name/bin/activate'
+                sh 'python3 -m venv ./environment'
+                sh 'source environment/bin/activate'
                 sh 'pip install --no-cache-dir -r requirements.txt --user'
             }
         }
