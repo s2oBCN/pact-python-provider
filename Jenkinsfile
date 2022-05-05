@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.10.4-bullseye'
+            image 'python:3.11.0a7-alpine3.15'
         }
     }
     parameters { string(name: 'DEPLOY_ENV', defaultValue: 'staging', description: '') }
@@ -14,7 +14,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "whoami"
                 sh 'python3 -m venv ./environment'
                 sh 'source environment/bin/activate'
                 sh 'pip install --no-cache-dir -r requirements.txt --user'
