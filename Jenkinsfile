@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.10.4-alpine3.15'
+            image 'python:3.10.4'
         }
     }
     parameters { string(name: 'DEPLOY_ENV', defaultValue: 'staging', description: '') }
