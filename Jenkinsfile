@@ -17,9 +17,10 @@ pipeline {
                // cleanWs()
               //  checkout scm
                 //sh 'python3 -m venv ./environment'
+                sh 'su -'
                 sh 'ls'
                 //sh 'source environment/bin/activate'
-                sh 'sudo pip install --no-cache-dir -r requirements.txt --user'
+                sh 'pip install --no-cache-dir -r requirements.txt'
             }
         }
         stage('Verify') {
