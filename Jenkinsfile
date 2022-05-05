@@ -17,7 +17,7 @@ pipeline {
                // cleanWs()
               //  checkout scm
                 sh 'python3 -m venv environment'
-                sh 'source environment/bin/activate'
+               // sh 'python3 source environment/bin/activate'
                 sh 'pip install --no-cache-dir -r requirements.txt'
             }
         }
