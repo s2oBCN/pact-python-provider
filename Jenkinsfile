@@ -14,7 +14,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pip install --no-cache-dir -r requirements.txt'
+                sh 'sudo pip install --no-cache-dir -r requirements.txt'
             }
         }
         stage('Verify') {
