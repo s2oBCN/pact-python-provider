@@ -14,6 +14,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                cleanWs()
+                checkout scm
                 sh 'python3 -m venv ./environment'
                 sh 'ls'
                 //sh 'source environment/bin/activate'
