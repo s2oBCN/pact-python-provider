@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.10.4'
+            image 'python:3.10.4-slim-bullseye'
         }
     }
     parameters { string(name: 'DEPLOY_ENV', defaultValue: 'staging', description: '') }
@@ -16,10 +16,8 @@ pipeline {
             steps {
                // cleanWs()
               //  checkout scm
-                //sh 'python3 -m venv ./environment'
-                sh 'su -'
-                sh 'ls'
-                //sh 'source environment/bin/activate'
+                sh 'python3 -m venv ./environment'
+                sh 'source environment/bin/activate'
                 sh 'pip install --no-cache-dir -r requirements.txt'
             }
         }
