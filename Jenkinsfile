@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'python:3.9.8-slim-buste'
+            image 'python:3.10.4-bullseye'
         }
     }
     parameters { string(name: 'DEPLOY_ENV', defaultValue: 'staging', description: '') }
