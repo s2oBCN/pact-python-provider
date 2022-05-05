@@ -14,6 +14,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'python3 -m venv env'
+                sh 'source enviroment_name/bin/activate'
                 sh 'pip install --no-cache-dir -r requirements.txt --user'
             }
         }
