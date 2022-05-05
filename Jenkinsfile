@@ -19,7 +19,7 @@ pipeline {
                 //sh 'python3 -m venv ./environment'
                 sh 'ls'
                 //sh 'source environment/bin/activate'
-                sh 'pip install --no-cache-dir -r requirements.txt --user'
+                sh 'sudo pip install --no-cache-dir -r requirements.txt --user'
             }
         }
         stage('Verify') {
