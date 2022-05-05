@@ -1,5 +1,5 @@
-fastapi==0.67.0
-pytest==5.4.1
-requests>=2.26.0
-uvicorn>=0.14.0
+fastapi==0.75.2
+pytest==7.1.2
+requests==2.27.1
+uvicorn==0.17.6
 pact-python==1.5.2
